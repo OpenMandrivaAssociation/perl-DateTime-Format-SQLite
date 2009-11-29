@@ -11,8 +11,10 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/DateTime/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires: perl(Class::Factory::Util)
 BuildRequires: perl(DateTime)
 BuildRequires: perl(DateTime::Format::Builder)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -33,11 +35,10 @@ of these formats.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+%make
 
 %check
-%{make} test
+%make test
 
 %install
 rm -rf %buildroot
@@ -51,5 +52,3 @@ rm -rf %buildroot
 %doc Changes README LICENSE
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
