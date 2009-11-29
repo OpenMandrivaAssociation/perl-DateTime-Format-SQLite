@@ -18,6 +18,8 @@ BuildRequires: perl(DateTime::Format::Builder)
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
+Requires: perl(DateTime::Format::Builder)
+
 %description
 This module understands the formats used by SQLite for its 'date',
 'datetime' and 'time' functions. It can be used to parse these formats in
