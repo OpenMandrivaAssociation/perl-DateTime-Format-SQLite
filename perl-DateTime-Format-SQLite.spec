@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 3
 
 Summary:    Parse and format SQLite dates and times
 License:    GPL+ or Artistic
@@ -18,6 +18,7 @@ BuildRequires: perl(DateTime::Format::Builder)
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
+Requires: perl(Class::Factory::Util)
 Requires: perl(DateTime::Format::Builder)
 
 %description
