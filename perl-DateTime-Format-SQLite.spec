@@ -1,15 +1,13 @@
 %define upstream_name    DateTime-Format-SQLite
-%define upstream_version 0.11
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.11
+Release:	7
 
 Summary:	Parse and format SQLite dates and times
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/DateTime-Format-SQLite
-Source0:	https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/DateTime-Format-SQLite-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/DateTime-Format-SQLite-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -35,7 +33,7 @@ understood/returned by SQLite's 'date', 'time', 'datetime', 'julianday' and
 of these formats.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
