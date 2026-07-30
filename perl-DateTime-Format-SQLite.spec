@@ -1,13 +1,14 @@
 %define upstream_name    DateTime-Format-SQLite
+%define upstream_version 0.11
 Name:		perl-%{upstream_name}
 Version:	0.11
-Release:	7
+Release:	1
 
 Summary:	Parse and format SQLite dates and times
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/DateTime-Format-SQLite
-Source0:	https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/DateTime-Format-SQLite-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/DateTime-Format-SQLite-0.11.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -50,29 +51,3 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
 
-%changelog
-* Mon Apr 18 2011 Funda Wang <fwang@mandriva.org> 0.110.0-2mdv2011.0
-+ Revision: 654913
-- rebuild for updated spec-helper
-
-* Sat Dec 12 2009 Jérôme Quelin <jquelin@mandriva.org> 0.110.0-1mdv2011.0
-+ Revision: 477620
-- update to 0.11
-
-* Sun Nov 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.100.0-3mdv2010.1
-+ Revision: 471496
-- adding missing requires:
-
-* Sun Nov 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.100.0-2mdv2010.1
-+ Revision: 471456
-- bump mkrel
-- adding missing requires:
-
-* Sun Nov 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.100.0-1mdv2010.1
-+ Revision: 471295
-- adding missing buildrequires:
-- import perl-DateTime-Format-SQLite
-
-
-* Sun Nov 29 2009 cpan2dist 0.10-1mdv
-- initial mdv release, generated with cpan2dist
