@@ -2,7 +2,7 @@
 %define upstream_version 0.11
 Name:		perl-%{upstream_name}
 Version:	0.11
-Release:	3
+Release:	4
 
 Summary:	Parse and format SQLite dates and times
 License:	GPL+ or Artistic
